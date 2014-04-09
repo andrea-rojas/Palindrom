@@ -17,4 +17,10 @@ public class PalindromTests {
 		String output = palindrom.filter("abcba");
 		assertThat(output, equalTo("abcba"));
 	}
+	
+	@Test
+	public void no_palindrom_returns_empty_output() {
+		String output = palindrom.filter("rola");
+		assertThat(output, equalTo(""));
+	}
 }
