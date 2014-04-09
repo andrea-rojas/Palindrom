@@ -23,4 +23,10 @@ public class PalindromTests {
 		String output = palindrom.filter("rola");
 		assertThat(output, equalTo(""));
 	}
+	
+	@Test
+	public void two_palindrom_returns_two_palindrom() {
+		String output = palindrom.filter("abcba deed");
+		assertThat(output, equalTo("abcba deed"));
+	}
 }
