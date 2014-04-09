@@ -12,4 +12,9 @@ public class PalindromTests {
 		assertThat(output, equalTo(""));
 	}
 
+	@Test
+	public void palindrom_returns_palindrom() {
+		String output = palindrom.filter("abcba");
+		assertThat(output, equalTo("abcba"));
+	}
 }
