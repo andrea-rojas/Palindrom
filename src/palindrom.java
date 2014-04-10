@@ -7,12 +7,15 @@ public class palindrom {
 	    input = deleteSpaces(input);
 	    String[] inputInWords = input.split(" ");
 	    String[] outputInWords = new String[inputInWords.length];
+	    String outputInString = null;
 	    int i = 0;
 	    
 	    for (i=0;i<inputInWords.length;i++){
 	    	outputInWords[i] = checkPalindrom(inputInWords[i]);	    		    	    
 	    }
-	    return join(outputInWords, " ");
+	    outputInString = join(outputInWords, " ");
+	    outputInString = deleteSpaces(outputInString);
+	    return (outputInString);
 	}
 
 	private static String checkPalindrom(String input) {
