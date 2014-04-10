@@ -4,9 +4,8 @@ import java.util.Arrays;
 public class palindrom {
 	
 	public static String filter(String input){
-	    input = input.trim();
-	    input = input.replaceAll("\\s+"," ");
-		String[] inputInWords = input.split(" ");
+	    input = deleteSpaces(input);
+	    String[] inputInWords = input.split(" ");
 	    String[] outputInWords = new String[inputInWords.length];
 	    int i = 0;
 	    
@@ -27,6 +26,12 @@ public class palindrom {
 			}
 		}
 		return input;
+	}
+	
+	private static String deleteSpaces(String input) {
+	    input = input.trim();
+	    input = input.replaceAll("\\s+"," ");
+	    return input;
 	}
 	
 	private static String join(String input[], String join) {
