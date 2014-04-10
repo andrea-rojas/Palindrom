@@ -15,7 +15,6 @@ public class palindrom {
 	}
 
 	private static String checkPalindrom(String input) {
-		String result = input;
 		int inputHalfLength = input.length()/2; //it's works for par and impar lenghts
 		int inputLength = input.length();
 		int i = 0;
@@ -25,7 +24,7 @@ public class palindrom {
 				return "";
 			}
 		}
-		return result;
+		return input;
 	}
 	
 	private static String join(String input[], String join) {
