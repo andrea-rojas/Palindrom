@@ -29,4 +29,11 @@ public class PalindromTests {
 		String output = palindrom.filter("abcba deed");
 		assertThat(output, equalTo("abcba deed"));
 	}
+	
+	@Test
+	public void two_palindrom_with_spaces_returns_two_palindrom() {
+		String output = palindrom.filter(" abcba  deed ");
+		assertThat(output, equalTo("abcba deed"));
+	}
+
 }
