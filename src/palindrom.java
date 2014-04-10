@@ -4,7 +4,9 @@ import java.util.Arrays;
 public class palindrom {
 	
 	public static String filter(String input){
-	    String[] inputInWords = input.split(" ");
+	    input = input.trim();
+	    input = input.replaceAll("\\s+"," ");
+		String[] inputInWords = input.split(" ");
 	    String[] outputInWords = new String[inputInWords.length];
 	    int i = 0;
 	    
