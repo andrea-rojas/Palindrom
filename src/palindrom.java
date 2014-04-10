@@ -3,17 +3,20 @@ import java.util.Arrays;
 
 public class palindrom {
 	
-	public static String filter(String input){
-	    input = deleteSpaces(input);
-	    String[] inputInWords = input.split(" ");
-	    String[] outputInWords = new String[inputInWords.length];
+	public static String filterPalindromWords(String input){
+	    
+		input = deleteSpaces(input);
+	    String[] inputInArray = input.split(" ");
+
+	    String[] outputInArray = new String[inputInArray.length];
 	    String outputInString = null;
 	    int i = 0;
 	    
-	    for (i=0;i<inputInWords.length;i++){
-	    	outputInWords[i] = checkPalindrom(inputInWords[i]);	    		    	    
+	    for (i=0;i<inputInArray.length;i++){
+	    	outputInArray[i] = checkPalindrom(inputInArray[i]);	    		    	    
 	    }
-	    outputInString = join(outputInWords, " ");
+	    
+	    outputInString = joinArrayInString(outputInArray, " ");
 	    outputInString = deleteSpaces(outputInString);
 	    return (outputInString);
 	}
@@ -37,14 +40,14 @@ public class palindrom {
 	    return input;
 	}
 	
-	private static String join(String input[], String join) {
-    StringBuilder sb = new StringBuilder();
+	private static String joinArrayInString(String input[], String join) {
+    StringBuilder result = new StringBuilder();
     int i;
     
     for (i = 0; i < input.length - 1; i++) {
-    	sb.append(input[i] + join);
+    	result.append(input[i] + join);
     }      
-    return sb.toString() + input[i];
+    return result.toString() + input[i];
     }
 	
 }
